@@ -1,10 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ChampionScrollBar from './components/championScrollBar/championScrollBar';
 
 function App() {
   return (
+
     <div className="App">
+      <ChampionScrollBar ></ChampionScrollBar>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
