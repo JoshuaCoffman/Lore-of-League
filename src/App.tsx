@@ -8,7 +8,7 @@ interface contextProps {
   selectedChampion: string,
   setSelectedChampion: React.Dispatch<React.SetStateAction<string>>,
 }
-const ChampionContext = React.createContext<contextProps>(null);
+export const ChampionContext = React.createContext<contextProps>(null);
 
 function App() {
   const [selectedChampion, setSelectedChampion] = useState("Aatrox")
