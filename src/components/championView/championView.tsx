@@ -1,12 +1,24 @@
+import { useService } from "../../hooks/useService";
+import { getChampionInfo } from "../../services/championService";
+import './championView.css';
+
 interface ChampionViewProps {
     selectedChampion: string,
 }
-export function ChampionView(props:ChampionViewProps) {
-    const {selectedChampion} = props;
+export function ChampionView(props: ChampionViewProps) {
+    const { selectedChampion } = props;
+    const championInfo: any = useService(getChampionInfo, selectedChampion).data
+
     return (
-        <div>
+        <div className="view-container">
             <img src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${selectedChampion}_0.jpg`} alt="Champion Splash"></img>
-            <div>Champion Name Here</div>
+            {championInfo &&
+                <>
+                    <div>{championInfo[0].id}</div>
+                    <div>Lore: {championInfo[0].lore}</div>
+                </>
+            }
+
         </div>
     )
 }

@@ -1,6 +1,6 @@
 .icon-container {
     display: flex;
-    position: fixed;
+    position: absolute;
     width: fit-content;
     flex-direction: column;
     overflow-y: scroll;

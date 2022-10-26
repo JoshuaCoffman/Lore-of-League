@@ -2,11 +2,18 @@
   text-align: center;
   background-color: #282c34;
   min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: row;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.scroll-bar-container {
+  width: 9rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {

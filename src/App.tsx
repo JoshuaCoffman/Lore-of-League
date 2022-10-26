@@ -15,7 +15,9 @@ function App() {
   return (
     <div className="App">
       <ChampionContext.Provider value={{selectedChampion, setSelectedChampion}}>
-      <ChampionScrollBar></ChampionScrollBar>
+        <div className='scroll-bar-container'>
+        <ChampionScrollBar></ChampionScrollBar>
+        </div>
       <ChampionView selectedChampion={selectedChampion}></ChampionView>
       </ChampionContext.Provider>
     </div>

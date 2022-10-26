@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 
-export function useService(callback: any) {
+export function useService(callback: any, parameters?: any) {
     const [data, setData] = useState<any>(null);
 
     useEffect(() => {
         if (callback) {
             let loading = true;
-            callback().then((stuff: any) =>{ 
-                if(loading){
-                    setData(stuff)
-            }} )
+            callback(parameters || "").then((values: any) => {
+                if (loading) {
+                    setData(values)
+                }
+            })
             return () => {
                 loading = false;
             }
         }
     }, [callback])
 
-    return {data};
+    return { data };
 }
