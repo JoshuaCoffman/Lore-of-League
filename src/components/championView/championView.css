@@ -1,6 +1,7 @@
 .view-container {
 display: flex;
 flex-direction: column;
-width: 50%;
-
+width: 60%;
+justify-content: center;
+margin-left: 22rem;
 }

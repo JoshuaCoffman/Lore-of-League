@@ -7,7 +7,7 @@ interface ChampionViewProps {
 }
 export function ChampionView(props: ChampionViewProps) {
     const { selectedChampion } = props;
-    const championInfo: any = useService(getChampionInfo, selectedChampion).data
+    let championInfo: any = useService(getChampionInfo, selectedChampion).data;
 
     return (
         <div className="view-container">

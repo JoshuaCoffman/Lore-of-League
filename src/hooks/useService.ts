@@ -15,7 +15,7 @@ export function useService(callback: any, parameters?: any) {
                 loading = false;
             }
         }
-    }, [callback])
+    }, [callback,parameters])
 
     return { data };
 }
