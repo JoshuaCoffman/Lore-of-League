@@ -1,18 +1,19 @@
-import React from 'react';
-import { useService } from '../../hooks/useService';
-import { getChampionList } from '../../services/championService';
+import React, { useContext } from 'react';
+import { ChampionListContext } from '../../App';
+import { Champion } from '../../types/Champion';
+
 import { ChampionIcon } from '../championIcon/championIcon';
 import './championScrollBar.css';
 
 function ChampionScrollBar() {
-  const championList: any = useService(getChampionList).data
+  const championContext = useContext<Champion[]>(ChampionListContext);
 
   return (
-        <div className='icon-container'>
-          {
-            championList && championList.map((champion: any, index: React.Key) => {return <ChampionIcon championId={champion.id} index={index}/>})
-          }
-        </div>
+    <div className='icon-container'>
+      {
+        championContext && championContext.map((champion: Champion) => { return <ChampionIcon championId={champion.id} key={champion.key} /> })
+      }
+    </div>
   );
 }
 
