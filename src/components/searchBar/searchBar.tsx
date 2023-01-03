@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { ChampionContext, ChampionListContext } from "../../App";
 import { Champion } from "../../types/Champion";
+import './searchBar.css';
 
 export function SearchBar() {
     const [searchText, setSearchText] = useState<string>('Enter a champion name here...');
@@ -16,9 +17,9 @@ export function SearchBar() {
     }
 
     return (
-        <div>
-            <input type="text" placeholder="Enter a champion name here..." onChange={(e) => { setSearchText(e.currentTarget.value); }}></input>
-            <button onClick={() => { searchForChampion(searchText) }} ></button>
+        <div className="search-container">
+            <input className="search-input" type="text" placeholder="Enter a champion name here..." onChange={(e) => { setSearchText(e.currentTarget.value); }}></input>
+            <button className="search-button" onClick={() => { searchForChampion(searchText) }}>Search</button>
         </div>
     );
 }

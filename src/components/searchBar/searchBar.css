@@ -1,0 +1,46 @@
+.search-button {
+    width: 4rem;
+    height: 1.3rem;
+    margin-left: 1rem;
+    color: #463714;
+    background-color: #C8AA6E
+
+    ;
+}
+
+.search-container {
+    margin: 1rem;
+}
+
+.search-input {
+    background-color: #C8AA6E;
+    color: #463714;
+    width: 15rem;
+    border-color: #1E2328;
+}
+
+input:focus,
+textarea:focus {
+    outline: none !important;
+    border-color: #785A28;
+    border-style: solid;
+    /* border: 20rem; */
+    box-shadow: 0 0 5px #785A28;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #3C3C41;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #3C3C41;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #3C3C41;
+}

@@ -5,3 +5,8 @@ width: 60%;
 justify-content: center;
 margin-left: 22rem;
 }
+
+img {
+    border-style: solid;
+    border-color: #785A28;
+}
