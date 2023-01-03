@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import ChampionScrollBar from './components/championScrollBar/championScrollBar';
 import { ChampionView } from './components/championView/championView';
+import { SearchBar } from './components/searchBar/searchBar';
 import { useService } from './hooks/useService';
 import { getChampionList } from './services/championService';
 import { Champion } from './types/Champion';
@@ -24,7 +25,10 @@ function App() {
           <div className='scroll-bar-container'>
             <ChampionScrollBar></ChampionScrollBar>
           </div>
+          <div>
+          <SearchBar></SearchBar>
           <ChampionView selectedChampion={selectedChampion}></ChampionView>
+          </div>
         </ChampionContext.Provider>
       </ChampionListContext.Provider>
       }
