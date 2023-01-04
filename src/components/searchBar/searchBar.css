@@ -3,9 +3,7 @@
     height: 1.3rem;
     margin-left: 1rem;
     color: #463714;
-    background-color: #C8AA6E
-
-    ;
+    background-color: #C8AA6E;
 }
 
 .search-container {
@@ -24,7 +22,6 @@ textarea:focus {
     outline: none !important;
     border-color: #785A28;
     border-style: solid;
-    /* border: 20rem; */
     box-shadow: 0 0 5px #785A28;
 }
 

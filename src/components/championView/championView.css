@@ -1,12 +1,49 @@
 .view-container {
-display: flex;
-flex-direction: column;
-width: 60%;
-justify-content: center;
-margin-left: 22rem;
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    justify-content: center;
+    margin-left: 22rem;
 }
 
 img {
     border-style: solid;
     border-color: #785A28;
+    width: 90%
+}
+
+.name-rhombus {
+    background-color: #785A28;
+    width: 10rem;
+    height: 2rem;
+    transform: skewX(35deg);
+    z-index: 1;
+    border-color: #32281E;
+    border-style: solid;
+    grid-row-start: 1;
+}
+
+.name {
+    z-index: 2;
+    color: #F0E6D2;
+    padding-top: .4rem;
+    grid-row-start: 1;
+}
+
+.name-container>* {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.name-container {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-auto-columns: min-content;
+}
+
+
+.lore {
+    color: #F0E6D2;
 }
